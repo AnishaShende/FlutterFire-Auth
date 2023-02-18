@@ -20,16 +20,23 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 RoundedButton(
                   colour: Colors.lightBlueAccent,
                   title: 'Log In',
-                  onPressed: () {
-                    Navigator.pushNamed(context, 'login_screen');
-                  },
+                  onPressed: () => Navigator.pushNamed(context, 'login_screen'),
+                  // async {
+                  //   await Future.delayed(const Duration(seconds: 1), (){
+                  //     Navigator.pushNamed(context, 'login_screen');
+                  //      });
+                  // },
                 ),
                 RoundedButton(
                     colour: Colors.blueAccent,
                     title: 'Register',
-                    onPressed: () {
-                      Navigator.pushNamed(context, 'registration_screen');
-                    }),
+                    onPressed: () => Navigator.pushNamed(context, 'registration_screen'),
+                    // async {
+                    // await Future.delayed(const Duration(seconds: 1), (){
+                    //   Navigator.pushNamed(context, 'registration_screen');
+                    //   });
+                    // }
+                    ),
               ]),
         ));
   }

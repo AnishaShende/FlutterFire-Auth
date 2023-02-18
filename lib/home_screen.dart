@@ -32,26 +32,29 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: null,
-        actions: <Widget>[
-          IconButton(
-              icon: Icon(Icons.close),
-              onPressed: () {
-                _auth.signOut();
-                Navigator.pop(context);
-
-                //Implement logout functionality
-              }),
-        ],
-        title: Text('Home Page'),
-        backgroundColor: Colors.lightBlueAccent,
-      ),
-      body: Center(
-        child: Text(
-          "Welcome User",
-          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          leading: null,
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.close),
+                onPressed: () 
+                {
+                  _auth.signOut();
+                  Navigator.pop(context);
+    
+                  //Implement logout functionality
+                }),
+          ],
+          title: Text('Home Page'),
+          backgroundColor: Colors.lightBlueAccent,
+        ),
+        body: Center(
+          child: Text(
+            "Welcome User",
+            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          ),
         ),
       ),
     );
